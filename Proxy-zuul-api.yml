@@ -177,10 +177,10 @@ Order-service-v1.1.1:
       
 News-service-v1.1.1:
   ribbon:
-    #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    #listOfServers: http://10.0.80.12:33031
-    #ConnectTimeout: 10000
-    #ReadTimeout: 10000
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: http://10.0.80.12:33031
+    ConnectTimeout: 10000
+    ReadTimeout: 10000
     MaxTotalHttpConnections: 2000
     MaxConnectionsPerHost: 1000
     maxAutoRetries: 3
