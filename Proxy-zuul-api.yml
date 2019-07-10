@@ -155,7 +155,7 @@ User-service-v1.1.1:
 Product-service-v1.1.1:
   ribbon:
     NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    listOfServers: http://10.0.80.11:33041
+    listOfServers: http://10.0.80.11:33011
     ConnectTimeout: 10000
     ReadTimeout: 10000
     MaxTotalHttpConnections: 2000
@@ -206,7 +206,7 @@ News-service-v1.1.1:
 Event-service-v1.1.1:
   ribbon:
     NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    listOfServers: http://10.0.80.13:33031
+    listOfServers: http://10.0.80.13:33041
     ConnectTimeout: 10000
     ReadTimeout: 10000
     MaxTotalHttpConnections: 2000
