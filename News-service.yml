@@ -8,6 +8,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://10.0.80.8:10002/eureka/
+  instance:
+    preferIpAddress: true
       
 logging:
   pattern: 
