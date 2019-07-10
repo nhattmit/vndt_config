@@ -1,3 +1,6 @@
+spring:
+   application:
+      name: News-Service
 server:
   port: 33031
 
