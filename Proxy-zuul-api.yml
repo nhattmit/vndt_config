@@ -49,6 +49,10 @@ zuul:
       path: /v1-1-1/searchservice/**
       serviceId: Search-service-v1.1.1
       stripPrefix: true
+    salemanservice:
+      path: /v1-1-1/saleservice/**
+      serviceId: Saleman-service-v1.1.1
+      stripPrefix: true
   retryable: true
   #ribbonIsolationStrategy:THREAD
   ribbon:
@@ -123,6 +127,13 @@ hystrix:
           strategy: THEARD
           thread:
             timeoutInMilliseconds: 120000
+    Saleman-service-v1.1.1:
+      execution:
+        isolation:
+          thread:
+          strategy: THEARD
+          thread:
+            timeoutInMilliseconds: 120000
 
 User-service-v1.1.1:
   ribbon:
@@ -143,10 +154,10 @@ User-service-v1.1.1:
     
 Product-service-v1.1.1:
   ribbon:
-    #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    #listOfServers: http://192.168.0.28:33011,http://192.168.0.32:33012
-#    ConnectTimeout: 10000
-#    ReadTimeout: 10000
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: http://10.0.80.11:33041
+    ConnectTimeout: 10000
+    ReadTimeout: 10000
     MaxTotalHttpConnections: 2000
     MaxConnectionsPerHost: 1000
     maxAutoRetries: 3
@@ -160,10 +171,10 @@ Product-service-v1.1.1:
       
 Order-service-v1.1.1:
   ribbon:
-    #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    #listOfServers: http://192.168.0.32:33021,http://192.168.0.28:33022
-#    ConnectTimeout: 10000 
-#    ReadTimeout: 10000
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: http://10.0.80.12:33021
+    ConnectTimeout: 10000 
+    ReadTimeout: 10000
     MaxTotalHttpConnections: 2000
     MaxConnectionsPerHost: 1000
     maxAutoRetries: 3
@@ -194,10 +205,10 @@ News-service-v1.1.1:
       
 Event-service-v1.1.1:
   ribbon:
-    #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    #listOfServers: http://192.168.0.34:33031,http://192.168.0.24:33032
-#    ConnectTimeout: 10000
-#    ReadTimeout: 10000
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: http://10.0.80.13:33031
+    ConnectTimeout: 10000
+    ReadTimeout: 10000
     MaxTotalHttpConnections: 2000
     MaxConnectionsPerHost: 1000
     maxAutoRetries: 3
@@ -209,12 +220,12 @@ Event-service-v1.1.1:
     eureka:
       enabled: true
 
-Shipper-service:
+Shipper-service-v1.1.1:
   ribbon:
-    #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    #listOfServers: http://192.168.0.24:33031,http://192.168.0.32:33032
-#    ConnectTimeout: 10000
-#    ReadTimeout: 10000
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: http://10.0.80.10:33051
+    ConnectTimeout: 10000
+    ReadTimeout: 10000
     MaxTotalHttpConnections: 2000
     MaxConnectionsPerHost: 1000
     maxAutoRetries: 3
@@ -226,12 +237,29 @@ Shipper-service:
     eureka:
       enabled: true
 
-Search-service:
+Search-service-v1.1.1:
   ribbon:
-    #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    #listOfServers: http://192.168.0.28:33031,http://192.168.0.34:33032
-#    ConnectTimeout: 10000
-#    ReadTimeout: 10000
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: http://10.0.80.11:33061
+    ConnectTimeout: 10000
+    ReadTimeout: 10000
+    MaxTotalHttpConnections: 2000
+    MaxConnectionsPerHost: 1000
+    maxAutoRetries: 3
+    MaxAutoRetriesNextServer: 3
+    OkToRetryOnAllOperations: true
+    ReadTimeout: 120000
+    ConnectTimeout: 10000
+    retryableStatusCodes: 404,502
+    eureka:
+      enabled: true
+      
+Saleman-service-v1.1.1:
+  ribbon:
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: http://10.0.80.13:33071
+    ConnectTimeout: 10000
+    ReadTimeout: 10000
     MaxTotalHttpConnections: 2000
     MaxConnectionsPerHost: 1000
     maxAutoRetries: 3
