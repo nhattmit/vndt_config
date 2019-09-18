@@ -1,6 +1,6 @@
 spring:
-   application:
-      name: News-service-2.6.5
+  application:
+    name: News-service-2.6.5
 
 server:
   port: 33031
@@ -9,8 +9,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://10.0.80.8:10002/eureka/
-      
-instance:
+  instance:
     preferIpAddress: true
       
 logging:
