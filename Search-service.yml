@@ -1,3 +1,7 @@
+spring:
+   application:
+      name: Search-Service
+
 server:
   port: 33061
 
@@ -6,6 +10,9 @@ eureka:
     serviceUrl:
       defaultZone: http://10.0.80.8:10002/eureka/
       
+instance:
+    preferIpAddress: true
+
 logging:
   pattern: 
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
