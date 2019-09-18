@@ -1,6 +1,6 @@
 spring:
    application:
-      name: Saleman-Service
+      name: Saleman-service-v2.6.5
 
 
 server:

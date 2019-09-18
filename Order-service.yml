@@ -1,6 +1,6 @@
 spring:
    application:
-      name: Order-Service
+      name: Order-service-v2.6.5
 
 server:
   port: 33021

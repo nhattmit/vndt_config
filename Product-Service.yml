@@ -1,6 +1,6 @@
 spring:
    application:
-      name: Product-Service
+      name: Product-service-v2.6.5
       
       
 server:
