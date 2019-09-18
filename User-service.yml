@@ -1,6 +1,10 @@
 spring:
   application:
     name: User-service-v2.6.5
+  cloud:
+    inetutils:
+      preferred-networks:
+        - 10.0
 
 server:
   port: 33001
