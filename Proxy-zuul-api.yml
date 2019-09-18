@@ -23,7 +23,7 @@ zuul:
   routes:
     userservice:
       path: /v2-6-5/userservice/**
-      serviceId: User-service-v2.6.5
+      serviceId: User-service
       stripPrefix: true
     productservice:
       path: /v2-6-5/productservice/**
@@ -80,7 +80,7 @@ zuul:
 
 hystrix:
   command:
-    User-service-v2.6.5:
+    User-service:
       execution:
         isolation:
           strategy: THEARD
@@ -135,7 +135,7 @@ hystrix:
           thread:
             timeoutInMilliseconds: 120000
 
-User-service-v2.6.5:
+User-service:
   ribbon:
     NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     listOfServers: http://10.0.80.10:33001
