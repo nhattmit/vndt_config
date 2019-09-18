@@ -1,3 +1,7 @@
+spring:
+   application:
+      name: User-service-v2.6.5
+
 server:
   port: 33001
 
