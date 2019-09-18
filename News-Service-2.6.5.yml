@@ -1,6 +1,6 @@
 spring:
    application:
-      name: News-Service-2.6.5
+      name: News-service-2.6.5
 
 server:
   port: 33031
