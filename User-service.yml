@@ -1,6 +1,6 @@
 spring:
    application:
-      name: User-service-v2.6.5
+      name: User-service
 
 server:
   port: 33001
