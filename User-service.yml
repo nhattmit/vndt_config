@@ -14,8 +14,8 @@ eureka:
     serviceUrl:
       defaultZone: http://10.0.80.8:10002/eureka/
   instance:	
-    prefer-ip-address: true
-    instance-id:
+    preferIpAddress: true
+    instanceId:
       
 logging:
   pattern: 
